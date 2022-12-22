@@ -1,18 +1,46 @@
-@import '../../../assets/styles/fonts';
-@import '../../../assets/styles/variables';
+@import "../../../assets/styles/fonts";
+@import "../../../assets/styles/variables";
 
+.inicio {
+  font-family: "Mada";
+  font-style: normal;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+}
 .sidebar-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 25%;
   height: 100%;
+  background: #12416f;
 
-  a {
+  button {
+    color: #fff;
+    font-family: "Mada";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
     text-decoration: none;
   }
+  a {
+    font-family: "Mada";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #fff;
+    letter-spacing: 0.1px;
+  }
 
-  .menu-items{
+  div {
+    background-color: #12416f;
+  }
+
+  .menu-items {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,21 +64,19 @@
       line-height: 24px;
       letter-spacing: 0em;
       text-align: left;
-      color: #9A9CB5;
+      color: #9a9cb5;
 
       height: 40px;
       border-radius: 48px;
       padding: 4px 16px 4px 12px;
 
-
       .item-title {
         margin-left: 10px;
       }
 
-
       &.active-item {
-        background: #EDEEFF;
-        .item-title{
+        background: #edeeff;
+        .item-title {
           font-family: Poppins;
           font-size: 16px;
           font-style: normal;
@@ -58,88 +84,87 @@
           line-height: 24px;
           letter-spacing: 0em;
           text-align: left;
-          color: #3843D0;
+          color: #3843d0;
         }
       }
-      
+
       &.mobile-only {
         display: none;
       }
     }
   }
 
-  .login-header-container{
-        display: flex;
-        height: 80px;
-        align-items: center;
-        padding: 0;
-        position: relative;
-        justify-content: center;
+  .login-header-container {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    padding: 0;
+    position: relative;
+    justify-content: center;
 
-        .login-header-contact-info{
-          display: none;
-        }
-        .login-header-title{
-          display: none;
-        }
-        
+    .login-header-contact-info {
+      display: none;
+    }
+    .login-header-title {
+      display: none;
+    }
   }
 }
 
 @media (max-height: $mobile-height) and (max-width: $mobile-width) {
   .sidebar-container {
-      .login-header-container {
-          display: none;
-      }
-      width: auto;
-      max-width: 414px;
-      height: 106px;
+    .login-header-container {
+      display: none;
+    }
+    width: auto;
+    max-width: 414px;
+    height: 106px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    border-top: 1px solid rgba(38, 38, 38, 0.25);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    .menu-items {
+      margin-left: 0px;
+      margin-top: 0px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      justify-items: center;
+      align-content: center;
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      background: #fff;
-      border-top: 1px solid rgba(38, 38, 38, 0.25);
-      position: fixed;
-      bottom: 0;
-      left: 0; 
-      right: 0;
-      z-index: 1;
-      .menu-items {
-        margin-left: 0px;
-        margin-top: 0px;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        justify-items: center;
-        align-content: center;
-        display: flex;
-        width: 100%;
-        padding: 0 16px;
-        .item{
-          margin: 0;
-          margin-left: 16px;
-          border-radius: initial;
-          padding-top: 24px;
-          .item-title{
-            display: none;
-          }
+      width: 100%;
+      padding: 0 16px;
+      .item {
+        margin: 0;
+        margin-left: 16px;
+        border-radius: initial;
+        padding-top: 24px;
+        .item-title {
+          display: none;
         }
+      }
 
-        .item.active-item {
-            background: none;
-            border-top: 4px solid #3843D0;
-          }
+      .item.active-item {
+        background: none;
+        border-top: 4px solid #3843d0;
       }
-      .menu-line{
-            position: absolute;
-            left: 30%;
-            right: 0px;
-            bottom: 8px;
-            height: 5px;
-            width: 173px;
-            background: #000000;
-            border-radius: 10px;
-            display: flex;
-      }
+    }
+    .menu-line {
+      position: absolute;
+      left: 30%;
+      right: 0px;
+      bottom: 8px;
+      height: 5px;
+      width: 173px;
+      background: #000000;
+      border-radius: 10px;
+      display: flex;
+    }
   }
 }
